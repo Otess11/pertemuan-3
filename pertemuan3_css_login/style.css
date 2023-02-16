@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(0,255,219);
+    background: linear-gradient(90deg, rgb(166, 231, 222) 14%, rgb(50, 225, 176) 45%, rgb(20, 87, 77) 99%);
+    height: 100px;
+    overflow: hidden;
+}
+
+.center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: whitesmoke;
+        border-radius: 10px;
+        box-shadow: 10px 10px 15px black;
+        
+}
+
+.center h1 {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px rgb(48, 167, 48);
+}
+
+.center form{
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+
+form .text_field{
+    border-bottom: 2px solid rgb(25, 51, 154);
+    margin: 30px;
+
+}
+
+.text_field input {
+    width: 100%;
+    padding: 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+
+}
+
+.text_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: rgb(147, 0, 0);
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.text_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    transition: 0.5s;
+}
+
+.text_field:focus ~ span ::before, .text_field input:valid ~ span::before {
+    width: 100%;
+
+}
+
+.text_field input:focus ~ label,
+.text_field input:focus ~ label {
+    top: -5px;
+    background-color: coral;
+}
+
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: azure;
+    background: linear-gradient(120deg, rgb(38, 234, 195), rgb(30, 166, 84));
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.password{
+    margin: -5px 0 20px;
+    color: rgb(26, 26, 26);
+    cursor: pointer;
+}
+
+.password :hover{
+    color: black;
+}
+
+.signup_link{
+    text-align: left;
+    margin: 10px 0 15px 5px;
+}
+
+.signup_link a{
+    margin: 30px 0;
+    font-size: 15px;
+    color: rgb(203, 4, 4);
+    text-decoration: none;
+}
+
+.signup_link a:hover{
+    color: coral;
+}
+
+.btn-grad1 {
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+}
+
+.btn-grad1:hover {
+    background-position: right, center;
+    color: gold;
+    box-shadow: 0 0 30px gray;
+}
+
+
+.btn-grad2 {
+    width: 100%;
+    background: linear-gradient(gold, light, yellow);
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: wheat;
+    box-shadow: 0 0 40px #eee;
+    border-radius: 10px;
+
+}
+
+.btn-grad2:hover {
+    background-position: right, center;
+    color: white;
+    box-shadow: 0 0 40px yellow;
+    text-decoration: none;
+
+}
